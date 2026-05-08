@@ -1,0 +1,1669 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerbToBe -- The Definitive English Encyclopedia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --burgundy: #800020;
+            --burgundy-light: #9a0030;
+            --burgundy-dark: #5c0018;
+            --ivory: #FFFFF0;
+            --ivory-warm: #fdfde8;
+            --ivory-cool: #f8f8ee;
+            --charcoal: #1A1A1A;
+            --charcoal-soft: #2a2a2a;
+            --charcoal-light: #3d3d3d;
+            --stone-gray: #c4bfb8;
+            --stone-gray-light: #e8e4df;
+            --gold-subtle: #c8a96e;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(26, 26, 26, 0.06), 0 1px 2px rgba(26, 26, 26, 0.04);
+            --shadow-md: 0 4px 16px rgba(26, 26, 26, 0.08), 0 2px 6px rgba(26, 26, 26, 0.04);
+            --shadow-lg: 0 12px 32px rgba(26, 26, 26, 0.12), 0 4px 12px rgba(26, 26, 26, 0.06);
+            --shadow-xl: 0 20px 48px rgba(26, 26, 26, 0.16), 0 8px 20px rgba(26, 26, 26, 0.08);
+            --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+            --font-heading: 'Montserrat', 'Inter', system-ui, -apple-system, sans-serif;
+            --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+            --nav-height: 68px;
+            --max-width: 1280px;
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 14px;
+            --border-radius-xl: 20px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--nav-height);
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            letter-spacing: -0.01em;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ──────────────────────────────────── */
+        /* NAVIGATION                          */
+        /* ──────────────────────────────────── */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--ivory);
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-smooth);
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+        .navbar.scrolled {
+            border-bottom-color: var(--stone-gray-light);
+            box-shadow: var(--shadow-sm);
+            background: rgba(255, 255, 240, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .navbar-inner {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 1.55rem;
+            letter-spacing: -0.03em;
+            color: var(--charcoal);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            transition: color var(--transition-fast);
+            user-select: none;
+        }
+        .nav-logo .logo-dot {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: var(--burgundy);
+            border-radius: 50%;
+            margin-left: -1px;
+            flex-shrink: 0;
+            transition: transform var(--transition-spring);
+        }
+        .nav-logo:hover .logo-dot {
+            transform: scale(1.6);
+        }
+        .nav-logo:hover {
+            color: var(--burgundy);
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 6px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--charcoal-soft);
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: var(--border-radius-sm);
+            transition: all var(--transition-fast);
+            position: relative;
+            white-space: nowrap;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 16px;
+            right: 16px;
+            height: 2px;
+            background: var(--burgundy);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform var(--transition-smooth);
+            border-radius: 1px;
+        }
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--burgundy);
+            background: rgba(128, 0, 32, 0.04);
+        }
+        .nav-links a:hover::after,
+        .nav-links a:focus-visible::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .nav-cta {
+            background: var(--burgundy) !important;
+            color: var(--ivory) !important;
+            padding: 10px 20px !important;
+            border-radius: var(--border-radius-md) !important;
+            font-weight: 800 !important;
+            letter-spacing: 0.07em !important;
+            transition: all var(--transition-smooth) !important;
+            box-shadow: var(--shadow-sm);
+        }
+        .nav-cta:hover {
+            background: var(--burgundy-light) !important;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+            color: var(--ivory) !important;
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+            background: none;
+            border: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2.5px;
+            background: var(--charcoal);
+            border-radius: 2px;
+            transition: all var(--transition-smooth);
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7.5px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7.5px) rotate(-45deg);
+        }
+
+        /* ──────────────────────────────────── */
+        /* MOBILE NAV OVERLAY                  */
+        /* ──────────────────────────────────── */
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(26, 26, 26, 0.7);
+            z-index: 998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition-smooth);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-nav-panel {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 300px;
+            max-width: 82vw;
+            height: 100vh;
+            background: var(--ivory);
+            z-index: 999;
+            padding: 100px 32px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: right var(--transition-smooth);
+            box-shadow: var(--shadow-xl);
+            overflow-y: auto;
+        }
+        .mobile-nav-panel.active {
+            right: 0;
+        }
+        .mobile-nav-panel a {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            text-decoration: none;
+            padding: 14px 18px;
+            border-radius: var(--border-radius-md);
+            transition: all var(--transition-fast);
+            display: block;
+        }
+        .mobile-nav-panel a:hover,
+        .mobile-nav-panel a:focus-visible {
+            background: rgba(128, 0, 32, 0.06);
+            color: var(--burgundy);
+        }
+        .mobile-nav-panel .mobile-cta {
+            background: var(--burgundy);
+            color: var(--ivory) !important;
+            text-align: center;
+            font-weight: 800;
+            margin-top: 12px;
+        }
+
+        /* ──────────────────────────────────── */
+        /* HERO SECTION                        */
+        /* ──────────────────────────────────── */
+        .hero {
+            min-height: calc(100vh - var(--nav-height));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 28px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -180px;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(128, 0, 32, 0.025) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -120px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(128, 0, 32, 0.018) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-content {
+            max-width: 880px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--burgundy);
+            border: 1.5px solid var(--burgundy);
+            padding: 8px 18px;
+            border-radius: 40px;
+            margin-bottom: 28px;
+            transition: all var(--transition-smooth);
+        }
+        .hero-badge:hover {
+            background: var(--burgundy);
+            color: var(--ivory);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(2.6rem, 6vw, 5.2rem);
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+            color: var(--charcoal);
+            margin-bottom: 22px;
+        }
+        .hero h1 .accent {
+            color: var(--burgundy);
+            position: relative;
+        }
+        .hero h1 .accent::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--burgundy);
+            opacity: 0.25;
+            border-radius: 2px;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--charcoal-light);
+            max-width: 600px;
+            margin: 0 auto 36px;
+            line-height: 1.6;
+            letter-spacing: 0.01em;
+        }
+        .hero-cta-group {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 15px 30px;
+            border-radius: var(--border-radius-md);
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: var(--burgundy);
+            color: var(--ivory);
+            box-shadow: var(--shadow-md);
+        }
+        .btn-primary:hover {
+            background: var(--burgundy-light);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--charcoal);
+            border: 2px solid var(--charcoal-soft);
+        }
+        .btn-outline:hover {
+            border-color: var(--burgundy);
+            color: var(--burgundy);
+            background: rgba(128, 0, 32, 0.03);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        .btn-arrow {
+            display: inline-block;
+            transition: transform var(--transition-smooth);
+        }
+        .btn:hover .btn-arrow {
+            transform: translateX(3px);
+        }
+
+        /* ──────────────────────────────────── */
+        /* SECTION BASICS                      */
+        /* ──────────────────────────────────── */
+        .section {
+            padding: 90px 28px;
+            position: relative;
+        }
+        .section-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        .section-label {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--burgundy);
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            letter-spacing: -0.02em;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--charcoal-light);
+            max-width: 620px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: var(--burgundy);
+            border-radius: 2px;
+            margin: 20px 0 40px;
+        }
+
+        /* ──────────────────────────────────── */
+        /* HISTORICAL / SOURCE FRAME           */
+        /* ──────────────────────────────────── */
+        .historical-frame {
+            position: relative;
+            border: 1px solid var(--stone-gray-light);
+            background: var(--white);
+            box-shadow: var(--shadow-md);
+            border-radius: 2px;
+            overflow: visible;
+            transition: all var(--transition-smooth);
+            margin: 0;
+            padding: 0;
+        }
+        .historical-frame:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--stone-gray);
+        }
+        .historical-frame-inner {
+            padding: 8px;
+            background: var(--ivory-cool);
+            border: 1px solid #e0dcd6;
+            position: relative;
+        }
+        .historical-frame img,
+        .historical-frame .placeholder-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            background: #e8e4df;
+            position: relative;
+        }
+        .placeholder-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            color: #b5afa6;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #f5f3ee 0%, #e8e4df 40%, #f0ede7 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .placeholder-img::after {
+            content: '';
+            position: absolute;
+            inset: 20px;
+            border: 2px dashed #d5cfc6;
+            border-radius: 2px;
+            pointer-events: none;
+        }
+        .placeholder-img .placeholder-icon {
+            font-size: 3.5rem;
+            opacity: 0.35;
+            z-index: 1;
+            filter: grayscale(0.6);
+        }
+        .frame-caption {
+            margin-top: 10px;
+            padding: 0 4px;
+            display: block;
+        }
+        .frame-caption-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+            color: var(--charcoal);
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        .frame-caption-source {
+            font-size: 0.72rem;
+            color: #8a8580;
+            font-style: italic;
+            letter-spacing: 0.02em;
+        }
+        .frame-corners {
+            position: absolute;
+            inset: -6px;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .frame-corner {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-color: var(--burgundy);
+            border-style: solid;
+            opacity: 0.5;
+            transition: opacity var(--transition-smooth);
+        }
+        .historical-frame:hover .frame-corner {
+            opacity: 0.9;
+        }
+        .frame-corner-tl {
+            top: 0;
+            left: 0;
+            border-width: 2px 0 0 2px;
+        }
+        .frame-corner-tr {
+            top: 0;
+            right: 0;
+            border-width: 2px 2px 0 0;
+        }
+        .frame-corner-bl {
+            bottom: 0;
+            left: 0;
+            border-width: 0 0 2px 2px;
+        }
+        .frame-corner-br {
+            bottom: 0;
+            right: 0;
+            border-width: 0 2px 2px 0;
+        }
+
+        /* ──────────────────────────────────── */
+        /* GRAMMAR SECTION                     */
+        /* ──────────────────────────────────── */
+        .grammar-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .grammar-article {
+            background: var(--white);
+            border: 1px solid var(--stone-gray-light);
+            border-radius: var(--border-radius-lg);
+            padding: 36px 32px;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-smooth);
+            position: relative;
+        }
+        .grammar-article:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--stone-gray);
+        }
+        .grammar-article h3 {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--stone-gray-light);
+        }
+        .grammar-article h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--burgundy);
+            margin: 22px 0 8px;
+        }
+        .grammar-article p,
+        .grammar-article li {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--charcoal-soft);
+        }
+        .grammar-article ul,
+        .grammar-article ol {
+            padding-left: 22px;
+            margin: 8px 0 16px;
+        }
+        .grammar-article li {
+            margin-bottom: 6px;
+        }
+        .source-box {
+            background: var(--ivory-warm);
+            border-left: 4px solid var(--burgundy);
+            padding: 16px 20px;
+            margin-top: 24px;
+            border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+            font-size: 0.82rem;
+            color: var(--charcoal-light);
+            transition: all var(--transition-smooth);
+            position: relative;
+        }
+        .source-box:hover {
+            border-left-width: 6px;
+            background: #fafae8;
+            box-shadow: var(--shadow-sm);
+        }
+        .source-box .source-label {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--burgundy);
+            margin-bottom: 4px;
+        }
+        .source-box cite {
+            font-style: italic;
+            color: #7a7570;
+            font-size: 0.76rem;
+        }
+
+        /* ──────────────────────────────────── */
+        /* VOCABULARY & IDIOMS GRID            */
+        /* ──────────────────────────────────── */
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .vocab-card {
+            background: var(--white);
+            border: 1px solid var(--stone-gray-light);
+            border-radius: var(--border-radius-lg);
+            padding: 28px 24px 22px;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-smooth);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            cursor: default;
+        }
+        .vocab-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--burgundy);
+            border-left: 3px solid var(--burgundy);
+        }
+        .vocab-card .card-ref {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            color: #b5afa6;
+            text-transform: uppercase;
+        }
+        .vocab-card .card-word {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: -0.02em;
+            color: var(--charcoal);
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+        .vocab-card .card-def {
+            font-size: 0.9rem;
+            color: var(--charcoal-soft);
+            line-height: 1.55;
+            flex-grow: 1;
+        }
+        .vocab-card .card-example {
+            font-size: 0.82rem;
+            color: var(--burgundy);
+            font-style: italic;
+            background: rgba(128, 0, 32, 0.03);
+            padding: 10px 14px;
+            border-radius: var(--border-radius-sm);
+            letter-spacing: 0.01em;
+            line-height: 1.5;
+        }
+        .vocab-card .card-tag {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--burgundy);
+            border: 1px solid rgba(128, 0, 32, 0.3);
+            padding: 4px 10px;
+            border-radius: 20px;
+            align-self: flex-start;
+            transition: all var(--transition-fast);
+        }
+        .vocab-card:hover .card-tag {
+            background: var(--burgundy);
+            color: var(--ivory);
+            border-color: var(--burgundy);
+        }
+
+        /* ──────────────────────────────────── */
+        /* ABOUT SECTION                       */
+        /* ──────────────────────────────────── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-text h3 {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--burgundy);
+            margin: 20px 0 8px;
+        }
+        .about-text h3:first-child {
+            margin-top: 0;
+        }
+        .about-text p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--charcoal-soft);
+            margin-bottom: 14px;
+        }
+
+        /* ──────────────────────────────────── */
+        /* CONTACT FORM                        */
+        /* ──────────────────────────────────── */
+        .contact-section {
+            background: var(--charcoal);
+            color: var(--ivory);
+            padding: 90px 28px;
+            margin-top: 30px;
+        }
+        .contact-section .section-label {
+            color: var(--stone-gray-light);
+        }
+        .contact-section .section-title {
+            color: var(--ivory);
+        }
+        .contact-section .section-subtitle {
+            color: #c4bfb8;
+        }
+        .contact-section .divider {
+            background: var(--burgundy-light);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .form-group label {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #c4bfb8;
+        }
+        .form-group input,
+        .form-group textarea {
+            background: var(--charcoal-soft);
+            border: 1px solid var(--charcoal-light);
+            border-radius: var(--border-radius-md);
+            padding: 14px 16px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--ivory);
+            transition: all var(--transition-smooth);
+            resize: vertical;
+            letter-spacing: 0.01em;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--burgundy-light);
+            box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.2);
+            background: #242424;
+        }
+        .form-group textarea {
+            min-height: 130px;
+        }
+        .form-submit {
+            align-self: flex-start;
+        }
+        .form-success {
+            display: none;
+            background: rgba(128, 0, 32, 0.2);
+            border: 1px solid var(--burgundy-light);
+            border-radius: var(--border-radius-md);
+            padding: 18px 22px;
+            color: var(--ivory);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
+        .form-success.visible {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+        .contact-info-card {
+            background: var(--charcoal-soft);
+            border-radius: var(--border-radius-lg);
+            padding: 36px 30px;
+            border: 1px solid var(--charcoal-light);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-info-card h4 {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--ivory);
+        }
+        .contact-info-card p {
+            color: #c4bfb8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.9rem;
+            color: #c4bfb8;
+        }
+        .contact-info-item .info-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .contact-info-item a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color var(--transition-fast);
+        }
+        .contact-info-item a:hover {
+            border-bottom-color: var(--burgundy-light);
+            color: var(--ivory);
+        }
+
+        /* ──────────────────────────────────── */
+        /* FOOTER                              */
+        /* ──────────────────────────────────── */
+        .footer {
+            background: var(--charcoal);
+            border-top: 1px solid var(--charcoal-light);
+            padding: 36px 28px;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: -0.02em;
+            color: var(--ivory);
+        }
+        .footer-copy {
+            font-size: 0.78rem;
+            color: #8a8580;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            font-size: 0.78rem;
+            color: #8a8580;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: color var(--transition-fast);
+        }
+        .footer-links a:hover {
+            color: var(--ivory);
+        }
+
+        /* ──────────────────────────────────── */
+        /* REVEAL ANIMATIONS                   */
+        /* ──────────────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ──────────────────────────────────── */
+        /* RESPONSIVE BREAKPOINTS              */
+        /* ──────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .grammar-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .vocab-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .hero h1 {
+                font-size: clamp(2rem, 5vw, 3.6rem);
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .vocab-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+            .section {
+                padding: 60px 18px;
+            }
+            .hero {
+                padding: 40px 18px 60px;
+                min-height: auto;
+            }
+            .hero h1 {
+                font-size: clamp(1.8rem, 7vw, 2.8rem);
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            .grammar-article {
+                padding: 24px 18px;
+            }
+            .btn {
+                padding: 13px 22px;
+            }
+            .frame-corners {
+                inset: -4px;
+            }
+            .frame-corner {
+                width: 12px;
+                height: 12px;
+            }
+        }
+        @media (max-width: 480px) {
+            .vocab-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .hero-cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .navbar-inner {
+                padding: 0 14px;
+            }
+            .nav-logo {
+                font-size: 1.25rem;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+            .footer-links {
+                justify-content: center;
+            }
+            .contact-section {
+                padding: 50px 18px;
+            }
+            .grammar-article h3 {
+                font-size: 1rem;
+            }
+            .vocab-card .card-word {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- NAVIGATION                            -->
+    <!-- ══════════════════════════════════════ -->
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+        <div class="navbar-inner">
+            <a href="#home" class="nav-logo" aria-label="VerbToBe Home">
+                Verb<span style="font-weight:500;">To</span>Be<span class="logo-dot"></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#grammar">Grammar</a></li>
+                <li><a href="#vocabulary">Vocabulary &amp; Idioms</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+    <div class="mobile-nav-panel" id="mobilePanel">
+        <a href="#home">Home</a>
+        <a href="#grammar">Grammar</a>
+        <a href="#vocabulary">Vocabulary &amp; Idioms</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="mobile-cta">Contact</a>
+    </div>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- HERO SECTION                         -->
+    <!-- ══════════════════════════════════════ -->
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <span class="hero-badge">● English Language Encyclopedia</span>
+            <h1>The English Language, <span class="accent">Deconstructed</span>.</h1>
+            <p class="hero-subtitle">
+                A comprehensive, archival-grade resource for mastering English grammar,
+                vocabulary, and idioms -- built with academic rigour and timeless design.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#grammar" class="btn btn-primary">
+                    Explore Grammar <span class="btn-arrow">→</span>
+                </a>
+                <a href="#vocabulary" class="btn btn-outline">
+                    Browse Vocabulary <span class="btn-arrow">↗</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- GRAMMAR SECTION                      -->
+    <!-- ══════════════════════════════════════ -->
+    <section class="section" id="grammar" style="background:var(--ivory-cool);">
+        <div class="section-inner">
+            <span class="section-label reveal">● Grammar Archive</span>
+            <h2 class="section-title reveal">The Foundations of English</h2>
+            <p class="section-subtitle reveal">
+                Structured articles with verified sources, nested references,
+                and cross-referenced citations -- curated for serious learners.
+            </p>
+            <div class="divider reveal"></div>
+
+            <div class="grammar-grid">
+                <!-- Article 1 -->
+                <article class="grammar-article reveal reveal-delay-1">
+                    <h3>Verb Tenses &amp; Aspect</h3>
+                    <p>
+                        The English verb system comprises twelve core tense-aspect combinations,
+                        organised across three temporal frames (past, present, future) and four
+                        aspectual categories (simple, continuous, perfect, perfect continuous).
+                    </p>
+                    <h4>Present Tenses</h4>
+                    <ul>
+                        <li><strong>Simple Present:</strong> Habitual actions &amp; general truths.</li>
+                        <li><strong>Present Continuous:</strong> Ongoing actions at the moment of speech.</li>
+                        <li><strong>Present Perfect:</strong> Past actions with present relevance.</li>
+                        <li><strong>Present Perfect Continuous:</strong> Duration from past to present.</li>
+                    </ul>
+                    <h4>Past Tenses</h4>
+                    <ul>
+                        <li><strong>Simple Past:</strong> Completed actions at a specific past time.</li>
+                        <li><strong>Past Continuous:</strong> Ongoing actions interrupted by another event.</li>
+                        <li><strong>Past Perfect:</strong> Actions completed before another past moment.</li>
+                    </ul>
+                    <div class="source-box">
+                        <span class="source-label">● Source Reference</span><br>
+                        <cite>Quirk, R., Greenbaum, S., Leech, G., &amp; Svartvik, J. (1985). <em>A Comprehensive Grammar of the English Language</em>. Longman.</cite>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="grammar-article reveal reveal-delay-2">
+                    <h3>Parts of Speech &amp; Syntax</h3>
+                    <p>
+                        English syntax follows a predominantly Subject-Verb-Object (SVO) word order.
+                        The eight traditional parts of speech form the building blocks of every
+                        grammatical construction in the language.
+                    </p>
+                    <h4>The Eight Categories</h4>
+                    <ol>
+                        <li><strong>Nouns</strong> -- entities, concepts, people, places.</li>
+                        <li><strong>Verbs</strong> -- actions, states, occurrences.</li>
+                        <li><strong>Adjectives</strong> -- modifiers describing nouns.</li>
+                        <li><strong>Adverbs</strong> -- modifiers for verbs, adjectives, or clauses.</li>
+                        <li><strong>Pronouns</strong> -- substitutes for nouns.</li>
+                        <li><strong>Prepositions</strong> -- relational words indicating position/time.</li>
+                        <li><strong>Conjunctions</strong> -- connectors between clauses or phrases.</li>
+                        <li><strong>Interjections</strong> -- exclamatory expressions.</li>
+                    </ol>
+                    <div class="source-box">
+                        <span class="source-label">● Source Reference</span><br>
+                        <cite>Huddleston, R. &amp; Pullum, G. K. (2002). <em>The Cambridge Grammar of the English Language</em>. Cambridge University Press.</cite>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- HISTORICAL IMAGE FRAME SHOWCASE      -->
+    <!-- ══════════════════════════════════════ -->
+    <section class="section" style="padding-top:40px; padding-bottom:40px; background:var(--ivory-cool);">
+        <div class="section-inner">
+            <figure class="historical-frame reveal" style="max-width:700px; margin:0 auto;">
+                <div class="frame-corners">
+                    <span class="frame-corner frame-corner-tl"></span>
+                    <span class="frame-corner frame-corner-tr"></span>
+                    <span class="frame-corner frame-corner-bl"></span>
+                    <span class="frame-corner frame-corner-br"></span>
+                </div>
+                <div class="historical-frame-inner">
+                    <div class="placeholder-img">
+                        <span class="placeholder-icon">📜</span>
+                    </div>
+                </div>
+                <figcaption class="frame-caption">
+                    <p class="frame-caption-title">The Lindisfarne Gospels -- Old English Manuscript</p>
+                    <p class="frame-caption-source">Source: British Library, Cotton MS Nero D.IV · Folio 27r · circa 700 CE</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- VOCABULARY & IDIOMS SECTION          -->
+    <!-- ══════════════════════════════════════ -->
+    <section class="section" id="vocabulary">
+        <div class="section-inner">
+            <span class="section-label reveal">● Archival Lexicon</span>
+            <h2 class="section-title reveal">Vocabulary &amp; Idioms</h2>
+            <p class="section-subtitle reveal">
+                Each entry is catalogued with definitions, contextual examples,
+                and scholarly annotations -- like a museum archive for the English lexicon.
+            </p>
+            <div class="divider reveal"></div>
+
+            <div class="vocab-grid">
+                <!-- Card 1 -->
+                <div class="vocab-card reveal reveal-delay-1">
+                    <span class="card-ref">Ref. 001-A</span>
+                    <span class="card-word">Ephemeral</span>
+                    <p class="card-def">Lasting for a very short time; transitory by nature.</p>
+                    <p class="card-example">"The ephemeral beauty of cherry blossoms reminds us to cherish each moment."</p>
+                    <span class="card-tag">Adjective</span>
+                </div>
+                <!-- Card 2 -->
+                <div class="vocab-card reveal reveal-delay-1">
+                    <span class="card-ref">Ref. 002-B</span>
+                    <span class="card-word">Sycophant</span>
+                    <p class="card-def">A person who acts obsequiously toward someone to gain advantage.</p>
+                    <p class="card-example">"The court was filled with sycophants who flattered the monarch relentlessly."</p>
+                    <span class="card-tag">Noun</span>
+                </div>
+                <!-- Card 3 -->
+                <div class="vocab-card reveal reveal-delay-1">
+                    <span class="card-ref">Ref. 003-C</span>
+                    <span class="card-word">Pragmatic</span>
+                    <p class="card-def">Dealing with things sensibly and realistically; practical.</p>
+                    <p class="card-example">"Her pragmatic approach to budgeting saved the company from collapse."</p>
+                    <span class="card-tag">Adjective</span>
+                </div>
+                <!-- Card 4 -- Idiom -->
+                <div class="vocab-card reveal reveal-delay-2">
+                    <span class="card-ref">Ref. 101-ID</span>
+                    <span class="card-word">Bury the Hatchet</span>
+                    <p class="card-def">To end a quarrel or conflict and make peace.</p>
+                    <p class="card-example">"After years of rivalry, the two CEOs decided to bury the hatchet and collaborate."</p>
+                    <span class="card-tag">Idiom</span>
+                </div>
+                <!-- Card 5 -- Idiom -->
+                <div class="vocab-card reveal reveal-delay-2">
+                    <span class="card-ref">Ref. 102-ID</span>
+                    <span class="card-word">Turn a Blind Eye</span>
+                    <p class="card-def">To deliberately ignore something that one knows is wrong.</p>
+                    <p class="card-example">"The manager turned a blind eye to the minor infractions to maintain morale."</p>
+                    <span class="card-tag">Idiom</span>
+                </div>
+                <!-- Card 6 -->
+                <div class="vocab-card reveal reveal-delay-2">
+                    <span class="card-ref">Ref. 004-D</span>
+                    <span class="card-word">Laconic</span>
+                    <p class="card-def">Using very few words to express meaning; concise to the point of terseness.</p>
+                    <p class="card-example">"His laconic reply -- 'Fine.' -- spoke volumes about his disappointment."</p>
+                    <span class="card-tag">Adjective</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SECOND HISTORICAL IMAGE              -->
+    <!-- ══════════════════════════════════════ -->
+    <section class="section" style="padding-top:20px; padding-bottom:50px;">
+        <div class="section-inner">
+            <figure class="historical-frame reveal" style="max-width:700px; margin:0 auto;">
+                <div class="frame-corners">
+                    <span class="frame-corner frame-corner-tl"></span>
+                    <span class="frame-corner frame-corner-tr"></span>
+                    <span class="frame-corner frame-corner-bl"></span>
+                    <span class="frame-corner frame-corner-br"></span>
+                </div>
+                <div class="historical-frame-inner">
+                    <div class="placeholder-img" style="aspect-ratio:16/10;">
+                        <span class="placeholder-icon">📖</span>
+                    </div>
+                </div>
+                <figcaption class="frame-caption">
+                    <p class="frame-caption-title">Samuel Johnson's Dictionary -- First Edition, 1755</p>
+                    <p class="frame-caption-source">Source: Bodleian Library, Oxford · Archival Collection · Reference JJ-1755-4</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- ABOUT SECTION                        -->
+    <!-- ══════════════════════════════════════ -->
+    <section class="section" id="about" style="background:var(--ivory-cool);">
+        <div class="section-inner">
+            <span class="section-label reveal">● About the Project</span>
+            <h2 class="section-title reveal">Our Mission</h2>
+            <p class="section-subtitle reveal">
+                VerbToBe exists at the intersection of scholarly precision and
+                uncompromising design -- a reference work that honours the depth of
+                the English language.
+            </p>
+            <div class="divider reveal"></div>
+
+            <div class="about-grid">
+                <figure class="historical-frame reveal reveal-delay-1">
+                    <div class="frame-corners">
+                        <span class="frame-corner frame-corner-tl"></span>
+                        <span class="frame-corner frame-corner-tr"></span>
+                        <span class="frame-corner frame-corner-bl"></span>
+                        <span class="frame-corner frame-corner-br"></span>
+                    </div>
+                    <div class="historical-frame-inner">
+                        <div class="placeholder-img" style="aspect-ratio:1/1;">
+                            <span class="placeholder-icon">🏛️</span>
+                        </div>
+                    </div>
+                    <figcaption class="frame-caption">
+                        <p class="frame-caption-title">The VerbToBe Archive -- Headquarters</p>
+                        <p class="frame-caption-source">Source: VerbToBe Editorial Board · Established 2024</p>
+                    </figcaption>
+                </figure>
+                <div class="about-text reveal reveal-delay-2">
+                    <h3>Academic Rigour</h3>
+                    <p>
+                        Every entry is cross-referenced against authoritative linguistic sources,
+                        including the <em>Oxford English Dictionary</em>, the <em>Cambridge Grammar</em>,
+                        and peer-reviewed journals in applied linguistics. We cite our sources
+                        transparently, so you can verify every claim.
+                    </p>
+                    <h3>Archival Design Philosophy</h3>
+                    <p>
+                        The visual language of VerbToBe draws from centuries-old manuscript traditions,
+                        museum curation standards, and the bold, industrial aesthetic of archival
+                        fashion houses. Every element -- from the burgundy accents to the source
+                        frames -- is intentional.
+                    </p>
+                    <h3>For Serious Learners</h3>
+                    <p>
+                        Whether you are a linguist, an ESL advanced learner, or a writer seeking
+                        precision, VerbToBe provides the depth and clarity that superficial
+                        dictionaries cannot offer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- CONTACT SECTION                      -->
+    <!-- ══════════════════════════════════════ -->
+    <section class="contact-section" id="contact">
+        <div class="section-inner">
+            <span class="section-label reveal">● Get in Touch</span>
+            <h2 class="section-title reveal">Contact the Editorial Board</h2>
+            <p class="section-subtitle reveal">
+                Inquiries, corrections, and scholarly contributions are welcomed.
+                We respond within 48 hours.
+            </p>
+            <div class="divider reveal"></div>
+
+            <div class="contact-grid">
+                <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Your full name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="your@email.com" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="e.g., Grammar correction, Collaboration" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Your detailed message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">
+                        Send Message <span class="btn-arrow">→</span>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        ✓ Your message has been received. The editorial board will respond shortly.
+                    </div>
+                </form>
+
+                <div class="contact-info-card reveal reveal-delay-2">
+                    <h4>Editorial Office</h4>
+                    <p>
+                        The VerbToBe archive is maintained by a dedicated team of linguists,
+                        editors, and designers committed to preserving the richness of the
+                        English language.
+                    </p>
+                    <div class="contact-info-item">
+                        <span class="info-icon">📍</span>
+                        <span>Oxford, United Kingdom</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="info-icon">✉️</span>
+                        <span><a href="mailto:info@verbtobe.com">info@verbtobe.com</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="info-icon">🕐</span>
+                        <span>Response time: within 48 hours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- FOOTER                               -->
+    <!-- ══════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">VerbToBe<span style="color:var(--burgundy-light);">.</span></span>
+            <span class="footer-copy">© 2026 verbtobe.com | All Rights Reserved</span>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#grammar">Grammar</a></li>
+                <li><a href="#vocabulary">Vocabulary &amp; Idioms</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- JAVASCRIPT                           -->
+    <!-- ══════════════════════════════════════ -->
+    <script>
+        (function() {
+            // ── DOM References ─────────────────
+            const navbar = document.getElementById('navbar');
+            const hamburger = document.getElementById('hamburger');
+            const mobileOverlay = document.getElementById('mobileOverlay');
+            const mobilePanel = document.getElementById('mobilePanel');
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+            const allRevealElements = document.querySelectorAll('.reveal');
+
+            // ── Navbar Scroll Effect ──────────
+            function handleScroll() {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll(); // initial check
+
+            // ── Mobile Menu ───────────────────
+            function openMobileMenu() {
+                hamburger.classList.add('active');
+                hamburger.setAttribute('aria-expanded', 'true');
+                mobileOverlay.classList.add('active');
+                mobilePanel.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMobileMenu() {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                mobileOverlay.classList.remove('active');
+                mobilePanel.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            hamburger.addEventListener('click', () => {
+                if (hamburger.classList.contains('active')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+
+            mobileOverlay.addEventListener('click', closeMobileMenu);
+
+            // Close mobile menu when a link is clicked
+            const mobileLinks = mobilePanel.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    closeMobileMenu();
+                });
+            });
+
+            // Close mobile menu on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+
+            // ── Smooth Scroll for all anchor links (fallback) ──
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const navHeight = navbar.offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window
+                            .pageYOffset - navHeight - 10;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ── Intersection Observer for Reveal Animations ──
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -60px 0px',
+                threshold: 0.1
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            allRevealElements.forEach(el => revealObserver.observe(el));
+
+            // ── Contact Form Handling ─────────
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Basic validation
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const subject = document.getElementById('subject').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !email || !subject || !message) {
+                    alert('Please fill in all fields before submitting.');
+                    return;
+                }
+
+                // Simple email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+
+                // Simulate submission
+                const submitBtn = contactForm.querySelector('.form-submit');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Sending…';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    // Show success
+                    formSuccess.classList.add('visible');
+                    contactForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+
+                    // Scroll to success message
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                    // Hide success after 6 seconds
+                    setTimeout(() => {
+                        formSuccess.classList.remove('visible');
+                    }, 6000);
+                }, 1200);
+            });
+
+            // ── Keyboard accessibility for cards ──
+            document.querySelectorAll('.vocab-card, .grammar-article, .historical-frame').forEach(card => {
+                card.setAttribute('tabindex', '0');
+                card.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+
+            console.log('%c VerbToBe %c -- The Definitive English Encyclopedia %c Ready.',
+                'font-weight:900;font-size:1.1rem;color:#800020;',
+                'color:#1A1A1A;',
+                'color:#888;');
+            console.log('%c verbtobe.com %c ● %c Academic Authority × Luxury Industrial Aesthetics',
+                'font-weight:700;color:#800020;',
+                'color:#1A1A1A;',
+                'color:#555;font-style:italic;');
+        })();
+    </script>
+</body>
+</html>
